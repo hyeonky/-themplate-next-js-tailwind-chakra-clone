@@ -1,14 +1,15 @@
+import classNames from 'classnames'
 import Image from 'next/image'
 import React from 'react'
 
-const Logo = () => {
+const Logo = ({ size = 10 }) => {
   return (
     <Image
       alt="Your Company"
       src="/images/pattern/common/logo.svg"
-      className="mx-auto h-10 w-auto"
-      width={40}
-      height={40}
+      className={classNames('mx-auto w-auto', `h-${size}`)}
+      width={size}
+      height={size}
     />
   )
 }
